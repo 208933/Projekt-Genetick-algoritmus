@@ -1,2 +1,35 @@
-ahoj  
-jak se mas 
+#import kniznic
+import  ...
+#arrays
+poradie = []
+generacia = []
+kvalita = []
+najlepsia_generacia = []
+#premenne
+y = 0
+max = 0
+POCET_ITERACII = 500
+#nacitanie miest
+M = int(input("Kolkymi mestami budeme prechadzat?"))
+mesta = MxM.suradnice(M)
+#nacitanie generacie
+i = 0
+for i in range(i, M):
+    generacia.append(i)
+random.shuffle(generacia)
+#main loop
+while y < POCET_ITERACII:
+    vzdialenost = 0
+    #funkcia urcujuca vzdialenost medzi mestami
+    vzdialenost = funkcie.vzd(M, mesta, generacia)
+    if y == 0:
+        max = vzdialenost
+    else:
+        if vzdialenost < max:
+            max = vzdialenost
+            najlepsia_generacia = generacia
+    #funkcia mutujuca generaciu
+    funkcie.mutacia(generacia, M)
+    y += 1
+    
+print("Najlepsi jedinec je "+str(najlepsia_generacia)+" s celkovou vzdialenostou "+str(round(max,2))+".")
